@@ -1,0 +1,29 @@
+ import java.util.*;
+  public class One{
+	  public static void main( String[] args){
+		  int t = sc.nextInt();
+		  while(t-->0){
+			  int x = sc.nextInt();
+			  System.out.println( Ans(x) );
+
+		  }
+	  }
+
+ // we have to check palindrome that is ( reverse) , as we know negative numbers can't have true result. if statements are used and to find true value find palindrome.
+		  public static boolean Ans(int x){
+			  if(x<0){
+				  return false;
+			  }
+			  int y=x;
+			  int rem=0;
+			  while(y>0){
+				  rem = rem*10 + y%10;
+				  y/=10;
+			  }
+			  return rem==x;
+		  }
+  }
+
+		  
+
+
